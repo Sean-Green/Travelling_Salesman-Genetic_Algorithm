@@ -12,12 +12,16 @@ static auto rng = default_random_engine();
 class tour {
 private:
     vector<city *> cities;
+    double fitness;
+    void calcFitness();
 public:
+    tour();
     tour(int num_cities);
-    tour(vector<city*> city_v);
+    tour(const vector<city*>& city_v);
     ~tour();
     const vector<city *> &getCities() const;
     void setCities(const vector<city *> &cities);
+    float getFitness();
 };
 
 

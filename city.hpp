@@ -22,6 +22,7 @@ public:
     void setY(int y);
     const string &getName() const;
     void setName(const string &name);
+    double getDistance(const city &c);
 };
 
 #endif //GENETICALGORITHM_CITY_HPP

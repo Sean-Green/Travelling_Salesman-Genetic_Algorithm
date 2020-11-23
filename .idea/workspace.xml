@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c5928d0-436a-48f6-92e1-5202d2b633a6" name="Default Changelist" comment="created basic city class, added tour files">
+    <list default="true" id="5c5928d0-436a-48f6-92e1-5202d2b633a6" name="Default Changelist" comment="Added some base functionality to to tour, working on random sort currently">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/city.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/city.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/city.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/city.hpp" afterDir="false" />
@@ -55,11 +55,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -74,7 +69,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606148567441</updated>
-      <workItem from="1606148568981" duration="6859000" />
+      <workItem from="1606148568981" duration="6904000" />
+      <workItem from="1606167480194" duration="3797000" />
     </task>
     <task id="LOCAL-00001" summary="created basic city class, added tour files">
       <created>1606157552606</created>
@@ -83,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606157552606</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added some base functionality to to tour, working on random sort currently">
+      <created>1606160000185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606160000185</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +94,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created basic city class, added tour files" />
-    <option name="LAST_COMMIT_MESSAGE" value="created basic city class, added tour files" />
+    <MESSAGE value="Added some base functionality to to tour, working on random sort currently" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some base functionality to to tour, working on random sort currently" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#New_File_Extensions" timestamp="1606153365498">
@@ -110,48 +114,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="276" y="218" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606148618790" />
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1606159847497">
+    <state width="914" height="283" key="GridCell.Tab.0.bottom" timestamp="1606170669013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606159847497" />
-    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1606159847497">
+    <state width="914" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606170669013" />
+    <state width="914" height="283" key="GridCell.Tab.0.center" timestamp="1606170669013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606159847497" />
-    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1606159847497">
+    <state width="914" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606170669013" />
+    <state width="914" height="283" key="GridCell.Tab.0.left" timestamp="1606170669013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606159847497" />
-    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1606159847497">
+    <state width="914" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606170669013" />
+    <state width="914" height="283" key="GridCell.Tab.0.right" timestamp="1606170669013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606159847497" />
-    <state width="1877" height="263" key="GridCell.Tab.1.bottom" timestamp="1606159847497">
+    <state width="914" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606170669013" />
+    <state width="1877" height="263" key="GridCell.Tab.1.bottom" timestamp="1606160014603">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606159847497" />
-    <state width="1877" height="263" key="GridCell.Tab.1.center" timestamp="1606159847497">
+    <state width="1877" height="263" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606160014603" />
+    <state width="1877" height="263" key="GridCell.Tab.1.center" timestamp="1606160014603">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606159847497" />
-    <state width="1877" height="263" key="GridCell.Tab.1.left" timestamp="1606159847497">
+    <state width="1877" height="263" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606160014603" />
+    <state width="1877" height="263" key="GridCell.Tab.1.left" timestamp="1606160014603">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606159847497" />
-    <state width="1877" height="263" key="GridCell.Tab.1.right" timestamp="1606159847497">
+    <state width="1877" height="263" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606160014603" />
+    <state width="1877" height="263" key="GridCell.Tab.1.right" timestamp="1606160014603">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606159847497" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1877" height="263" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606160014603" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606160003074">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606160003074" />
+    <state x="840" y="305" key="refactoring.ChangeSignatureDialog" timestamp="1606168806391">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="840" y="305" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606168806391" />
   </component>
 </project>

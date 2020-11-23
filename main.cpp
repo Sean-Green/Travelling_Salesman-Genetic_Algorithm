@@ -2,17 +2,16 @@
 #include "city.hpp"
 #include "tour.hpp"
 
-void diplay_cities(vector<city *> c){
+void display_cities(vector<city *> c){
     for (auto i = 0; i < c.size(); i++){
         cout << c[i]->getName() << " X: " << c[i]->getX() << " Y: " << c[i]->getY() << endl;
     }
 }
 int main() {
-    tour t(5);
-    diplay_cities(t.getCities());
-    for (auto i = 0; i < 100; i++){
-        tour tempt(t.getCities());
-        diplay_cities(tempt.getCities());
-    }
+    tour t(2);
+    display_cities(t.getCities());
+    tour t2(t.getCities());
+    display_cities(t2.getCities());
+    cout << t.getFitness();
     return 0;
 }
