@@ -21,7 +21,7 @@ public:
     int getY() const;
     void setY(int y);
     const string &getName() const;
-    void setName(const string &name);s
+    void setName(const string &name);
 };
 
 #endif //GENETICALGORITHM_CITY_HPP

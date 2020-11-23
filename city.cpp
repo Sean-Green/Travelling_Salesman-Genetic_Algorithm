@@ -26,3 +26,5 @@ const string &city::getName() const {
 void city::setName(const string &name) {
     city::name = name;
 }
+
+
