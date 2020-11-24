@@ -13,8 +13,9 @@ int main() {
     tour_manager tm;
 //    tm.displayElite();
     tm.display();
+    int id = 1;
     for (int i = 0; i < 1000; ++i){
-        cout << endl << "Generating\n" << endl;
+        cout << endl << "Generating<<" << id++ << "\n" << endl;
         tm.generate();
         tm.display();
     }

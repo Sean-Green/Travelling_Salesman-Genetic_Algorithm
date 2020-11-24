@@ -2,6 +2,7 @@
 // Created by seanj on 11/23/2020.
 //
 
+#include <iostream>
 #include "tour_manager.hpp"
 
 void tour_manager::setElite() {
@@ -26,6 +27,7 @@ void tour_manager::display() {
     for (tour t: tours) {
         t.display();
     }
+    cout << tours.size() << endl;
 }
 
 void tour_manager::displayElite() {

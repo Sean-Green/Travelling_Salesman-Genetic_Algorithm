@@ -29,9 +29,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c5928d0-436a-48f6-92e1-5202d2b633a6" name="Default Changelist" comment="Added some base functionality to to tour, working on random sort currently">
+    <list default="true" id="5c5928d0-436a-48f6-92e1-5202d2b633a6" name="Default Changelist" comment="Works now?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tour.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tour_manager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,12 +113,22 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created basic city class, added tour files" />
     <MESSAGE value="Added some base functionality to to tour, working on random sort currently" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some base functionality to to tour, working on random sort currently" />
+    <MESSAGE value="Works now?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Works now?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#New_File_Extensions" timestamp="1606153365498">
@@ -136,26 +147,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="276" y="218" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606148618790" />
-    <state width="1878" height="718" key="GridCell.Tab.0.bottom" timestamp="1606251098834">
+    <state width="1878" height="534" key="GridCell.Tab.0.bottom" timestamp="1606251442144">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="914" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606170669013" />
-    <state width="1878" height="718" key="GridCell.Tab.0.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1606251098834" />
-    <state width="1878" height="718" key="GridCell.Tab.0.center" timestamp="1606251098833">
+    <state width="1878" height="534" key="GridCell.Tab.0.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1606251442144" />
+    <state width="1878" height="534" key="GridCell.Tab.0.center" timestamp="1606251442143">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="914" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606170669013" />
-    <state width="1878" height="718" key="GridCell.Tab.0.center/0.0.1920.1053@0.0.1920.1053" timestamp="1606251098833" />
-    <state width="1878" height="718" key="GridCell.Tab.0.left" timestamp="1606251098833">
+    <state width="1878" height="534" key="GridCell.Tab.0.center/0.0.1920.1053@0.0.1920.1053" timestamp="1606251442143" />
+    <state width="1878" height="534" key="GridCell.Tab.0.left" timestamp="1606251442143">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="914" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606170669013" />
-    <state width="1878" height="718" key="GridCell.Tab.0.left/0.0.1920.1053@0.0.1920.1053" timestamp="1606251098833" />
-    <state width="1878" height="718" key="GridCell.Tab.0.right" timestamp="1606251098834">
+    <state width="1878" height="534" key="GridCell.Tab.0.left/0.0.1920.1053@0.0.1920.1053" timestamp="1606251442143" />
+    <state width="1878" height="534" key="GridCell.Tab.0.right" timestamp="1606251442143">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="914" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606170669013" />
-    <state width="1878" height="718" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1606251098834" />
+    <state width="1878" height="534" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1606251442143" />
     <state width="1878" height="347" key="GridCell.Tab.1.bottom" timestamp="1606250680009">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -176,10 +187,11 @@
     </state>
     <state width="1877" height="263" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606160014603" />
     <state width="1878" height="347" key="GridCell.Tab.1.right/0.0.1920.1053@0.0.1920.1053" timestamp="1606250680009" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606160003074">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="552" y="256" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1606251158718">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606160003074" />
+    <state x="552" y="256" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.1920.1053@0.0.1920.1053" timestamp="1606251158718" />
     <state x="840" y="305" key="refactoring.ChangeSignatureDialog" timestamp="1606168806391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
