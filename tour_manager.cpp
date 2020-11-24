@@ -7,17 +7,14 @@
 
 void tour_manager::setElite() {
     elite = tours[0];
-    for (tour t: tours) {
-        if (t.getFitness() < elite.getFitness()){
-            elite = tour(t);
-        }
-    }
 }
 
 tour_manager::tour_manager() {
-    tours.push_back(tour(num_cities));
-    for (int i = 1; i < num_tours; ++i){
-        tours.push_back(tour(tours[0].getCities()));
+    for (int i = 0; i < num_cities; i++) {
+        cities.push_back(new city());
+    }
+    for (int i = 0; i < num_tours; ++i){
+        tours.push_back(tour(cities));
     }
     sort(tours.begin(), tours.end());
     setElite();
@@ -35,6 +32,7 @@ void tour_manager::displayElite() {
 }
 
 void tour_manager::generate() {
+    setElite();
     tours[0] = tours[tours.size() - 1];
     tours.pop_back();
     vector<tour> children;
@@ -45,7 +43,7 @@ void tour_manager::generate() {
     }
     tours = children;
     sort(tours.begin(), tours.end());
-    elite = tours.front();
+    mutate();
 }
 
 tour tour_manager::get_child() {
@@ -59,6 +57,12 @@ tour tour_manager::get_child() {
     sort(pg1.begin(), pg1.end());
     sort(pg2.begin(), pg2.end());
     return pg1[0] + pg2[0];
+}
+
+void tour_manager::mutate() {
+    for (int i = 0; i < tours.size(); i++){
+        tours[i].mutate();
+    }
 }
 
 

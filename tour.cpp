@@ -92,4 +92,12 @@ tour tour::operator+(tour &t) {
     return child;
 }
 
+void tour::mutate() {
+    for (int i = 0; i < cities.size() - 1; ++i){
+        if (rand() % 100 <= 15 ){
+            swap(cities[i], cities[++i]);
+        }
+    }
+}
+
 

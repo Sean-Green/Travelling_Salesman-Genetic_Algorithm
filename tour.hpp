@@ -27,6 +27,8 @@ public:
     void deleteCities();
     void display();
     tour operator+(tour& ot);
+
+    void mutate();
 };
 
 
