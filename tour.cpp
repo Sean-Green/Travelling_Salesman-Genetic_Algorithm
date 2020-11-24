@@ -67,11 +67,15 @@ void tour::display() {
 }
 
 tour tour::operator+(tour &t) {
+
     vector<city *> child_route;
+
     int index = rand() % cities.size();
+
     for (int i = 0; i < index; ++i){
         child_route.push_back(cities[i]);
     }
+
     for (int i = 0; i < t.cities.size(); ++i){
         bool duplicate_flag = false;
         for (int j = 0; !duplicate_flag && j < child_route.size(); ++j){
