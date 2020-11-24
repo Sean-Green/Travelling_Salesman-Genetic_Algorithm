@@ -13,9 +13,10 @@ struct city {
 private:
     int x;
     int y;
+    int idNum;
     string name;
 public:
-    city():x(rand()%COORD_RANGE), y(rand()%COORD_RANGE), name("City " + to_string(id++)){}
+    city():x(rand()%COORD_RANGE), y(rand()%COORD_RANGE), idNum(id++), name("City " + to_string(this->idNum)){}
     int getX() const;
     void setX(int x);
     int getY() const;
@@ -23,6 +24,8 @@ public:
     const string &getName() const;
     void setName(const string &name);
     double getDistance(const city &c);
+
+    int getIdNum() const;
 };
 
 #endif //GENETICALGORITHM_CITY_HPP

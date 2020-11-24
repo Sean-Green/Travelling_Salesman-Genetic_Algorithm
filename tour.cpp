@@ -2,6 +2,8 @@
 // Created by seanj on 11/23/2020.
 //
 
+#include <iostream>
+#include <stdlib.h>
 #include "tour.hpp"
 
 void tour::calcFitness() {
@@ -26,12 +28,6 @@ tour::tour(const vector<city *>& city_v) {
     calcFitness();
 }
 
-tour::~tour() {
-    for (city* c: cities){
-        delete c;
-    }
-}
-
 const vector<city *> &tour::getCities() const {
     return cities;
 }
@@ -45,8 +41,51 @@ tour::tour() {
 
 }
 
-float tour::getFitness() {
+float tour::getFitness() const {
     return fitness;
+}
+
+bool tour::operator<(const tour &t) {
+    return fitness < t.getFitness();
+}
+
+// can't do this in the destructor, because every tour is looking at the same set of cities, must be called before
+// deleting the last tour reference
+void tour::deleteCities() {
+    for (city * c: cities){
+        delete c;
+    }
+}
+
+// Helper method for displaying city order and tour fitness
+void tour::display() {
+    cout << "|";
+    for (city * c: cities){
+        cout << c->getIdNum() << "|";
+    }
+    cout << "Fitness " << fitness << endl;
+}
+
+tour tour::operator+(tour &t) {
+    vector<city *> child_route;
+    int index = rand() % cities.size();
+    for (int i = 0; i < index; ++i){
+        child_route.push_back(cities[i]);
+    }
+    for (int i = 0; i < t.cities.size(); ++i){
+        bool duplicate_flag = false;
+        for (int j = 0; !duplicate_flag && j < child_route.size(); ++j){
+            if (child_route[j] == t.cities[i]) {
+                duplicate_flag = true;
+            }
+        }
+        if (!duplicate_flag){
+            child_route.push_back(t.cities[i]);
+        }
+    }
+    tour child;
+    child.setCities(child_route);
+    return child;
 }
 
 

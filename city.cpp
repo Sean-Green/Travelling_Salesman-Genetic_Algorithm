@@ -30,14 +30,14 @@ void city::setName(const string &name) {
 
 double city::getDistance(const city &c) {
     double xDis = (double) this->x - c.getX();
-    cout << " xd " << xDis << endl;
     double yDis = (double) this->y - c.getY();
-    cout << " yd " << yDis << endl;
     xDis = xDis * xDis;
-    cout << " xd " << xDis << endl;
     yDis = yDis * yDis;
-    cout << " yd " << yDis << endl;
     return sqrt((xDis + yDis));
+}
+
+int city::getIdNum() const {
+    return idNum;
 }
 
 

@@ -6,6 +6,8 @@
 #define GENETICALGORITHM_TOUR_HPP
 
 #include <algorithm>
+#include <cstdlib>
+#include <ctime>
 #include "city.hpp"
 
 static auto rng = default_random_engine();
@@ -18,10 +20,13 @@ public:
     tour();
     tour(int num_cities);
     tour(const vector<city*>& city_v);
-    ~tour();
     const vector<city *> &getCities() const;
     void setCities(const vector<city *> &cities);
-    float getFitness();
+    float getFitness() const;
+    bool operator<(const tour& t);
+    void deleteCities();
+    void display();
+    tour operator+(tour& ot);
 };
 
 

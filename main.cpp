@@ -1,6 +1,7 @@
 #include <iostream>
 #include "city.hpp"
 #include "tour.hpp"
+#include "tour_manager.hpp"
 
 void display_cities(vector<city *> c){
     for (auto i = 0; i < c.size(); i++){
@@ -8,10 +9,14 @@ void display_cities(vector<city *> c){
     }
 }
 int main() {
-    tour t(2);
-    display_cities(t.getCities());
-    tour t2(t.getCities());
-    display_cities(t2.getCities());
-    cout << t.getFitness();
+    srand(time(NULL));
+    tour_manager tm;
+//    tm.displayElite();
+    tm.display();
+    for (int i = 0; i < 1000; ++i){
+        cout << endl << "Generating\n" << endl;
+        tm.generate();
+        tm.display();
+    }
     return 0;
 }
