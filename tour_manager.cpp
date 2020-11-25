@@ -6,7 +6,9 @@
 #include "tour_manager.hpp"
 
 void tour_manager::setElite() {
-    elite = tours[0];
+    if (tours[0].getFitness() < elite.getFitness()){
+        elite = tours[0];
+    }
 }
 
 tour_manager::tour_manager() {
@@ -17,14 +19,13 @@ tour_manager::tour_manager() {
         tours.push_back(tour(cities));
     }
     sort(tours.begin(), tours.end());
-    setElite();
+    elite = tours[0];
 }
 
 void tour_manager::display() {
     for (tour t: tours) {
         t.display();
     }
-    cout << tours.size() << endl;
 }
 
 void tour_manager::displayElite() {
@@ -42,8 +43,8 @@ void tour_manager::generate() {
         children.push_back(get_child());
     }
     tours = children;
-    sort(tours.begin(), tours.end());
     mutate();
+    sort(tours.begin(), tours.end());
 }
 
 tour tour_manager::get_child() {
@@ -64,5 +65,15 @@ void tour_manager::mutate() {
         tours[i].mutate();
     }
 }
+
+void tour_manager::run(int cities, int tours, int iterations, double improvement) {
+    num_cities = cities;
+    num_tours = tours;
+    int generations = 0;
+    while (generations < iterations) {
+
+    }
+}
+
 
 

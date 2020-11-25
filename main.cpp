@@ -10,14 +10,12 @@ void display_cities(vector<city *> c){
 }
 int main() {
     srand(time(NULL));
+    int gen = 0;
     tour_manager tm;
-//    tm.displayElite();
-    tm.display();
-    int id = 1;
     for (int i = 0; i < 1000; ++i){
-        cout << endl << "Generating<<" << id++ << "\n" << endl;
-        tm.generate();
+        cout << "Generation " << gen++ << endl;
         tm.display();
+        tm.generate();
     }
     return 0;
 }

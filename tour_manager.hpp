@@ -11,7 +11,7 @@
 class tour_manager {
 
 private:
-    int num_cities = 32;
+    int num_cities = 100;
     int num_tours = 32;
     vector<city *> cities;
     vector<tour> tours;
@@ -22,10 +22,9 @@ public:
     void display();
     void displayElite();
     void generate();
-
     tour get_child();
-
     void mutate();
+    void run(int cities, int tours, int iterations, double improvement);
 };
 
 

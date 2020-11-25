@@ -93,11 +93,16 @@ tour tour::operator+(tour &t) {
 }
 
 void tour::mutate() {
+    city *temp;
     for (int i = 0; i < cities.size() - 1; ++i){
-        if (rand() % 100 <= 15 ){
-            swap(cities[i], cities[++i]);
+        int n = rand() % 100;
+        if ( n <= 15 ){
+            temp = cities[i];
+            cities[i] = cities[i+1];
+            cities[i+1] = temp;
         }
     }
+    calcFitness();
 }
 
 
