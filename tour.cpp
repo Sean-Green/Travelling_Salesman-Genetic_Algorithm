@@ -20,6 +20,7 @@ tour::tour(int num_cities) {
     calcFitness();
 }
 
+//constructor takes existing vector of cities and shuffles it.
 tour::tour(const vector<city *>& city_v) {
     for (city* c: city_v){
         cities.push_back(c);
@@ -45,6 +46,7 @@ double tour::getFitness() const {
     return fitness;
 }
 
+// used to sort
 bool tour::operator<(const tour &t) {
     return fitness < t.getFitness();
 }
@@ -63,7 +65,6 @@ void tour::display() {
     for (city * c: cities){
         cout << c->getIdNum() << "|";
     }
-    cout << "Fitness " << fitness << endl;
 }
 
 tour tour::operator+(tour &t) {
@@ -92,11 +93,12 @@ tour tour::operator+(tour &t) {
     return child;
 }
 
-void tour::mutate() {
+
+void tour::mutate(double rate) {
     city *temp;
     for (int i = 0; i < cities.size() - 1; ++i){
         int n = rand() % 100;
-        if ( n <= 15 ){
+        if ( n <= rate * 100 ){
             temp = cities[i];
             cities[i] = cities[i+1];
             cities[i+1] = temp;

@@ -28,7 +28,7 @@ public:
     void display();
     tour operator+(tour& ot);
 
-    void mutate();
+    void mutate(double rate);
 };
 
 

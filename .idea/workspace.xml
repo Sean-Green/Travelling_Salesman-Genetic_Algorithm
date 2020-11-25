@@ -68,15 +68,69 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GeneticAlgorithm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GeneticAlgorithm" TARGET_NAME="GeneticAlgorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GeneticAlgorithm" RUN_TARGET_NAME="GeneticAlgorithm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -95,6 +149,7 @@
       <workItem from="1606308394503" duration="1249000" />
       <workItem from="1606280871440" duration="44000" />
       <workItem from="1606322049420" duration="26000" />
+      <workItem from="1606322379440" duration="4698000" />
     </task>
     <task id="LOCAL-00001" summary="created basic city class, added tour files">
       <created>1606157552606</created>
@@ -162,6 +217,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="182" key="#New_File_Extensions/0.0.1920.1040@0.0.1920.1040" timestamp="1606254334951" />
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606322390058">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606322390058" />
     <state x="687" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606322069244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -178,22 +237,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="276" y="218" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606148618790" />
-    <state width="1877" height="251" key="GridCell.Tab.0.bottom" timestamp="1606322075397">
+    <state width="1877" height="251" key="GridCell.Tab.0.bottom" timestamp="1606327005420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606322075397" />
-    <state width="1877" height="251" key="GridCell.Tab.0.center" timestamp="1606322075397">
+    <state width="1877" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606327005420" />
+    <state width="1877" height="251" key="GridCell.Tab.0.center" timestamp="1606327005420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="251" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606322075397" />
-    <state width="1877" height="251" key="GridCell.Tab.0.left" timestamp="1606322075397">
+    <state width="1877" height="251" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606327005420" />
+    <state width="1877" height="251" key="GridCell.Tab.0.left" timestamp="1606327005420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="251" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606322075397" />
-    <state width="1877" height="251" key="GridCell.Tab.0.right" timestamp="1606322075397">
+    <state width="1877" height="251" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606327005420" />
+    <state width="1877" height="251" key="GridCell.Tab.0.right" timestamp="1606327005420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="251" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606322075397" />
+    <state width="1877" height="251" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606327005420" />
     <state width="1877" height="416" key="GridCell.Tab.1.bottom" timestamp="1606280853530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -218,21 +277,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="840" y="305" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606253675056" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>11</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/tour_manager.cpp</url>
-          <line>85</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
