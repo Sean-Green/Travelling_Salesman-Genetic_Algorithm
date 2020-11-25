@@ -22,7 +22,7 @@ public:
     tour(const vector<city*>& city_v);
     const vector<city *> &getCities() const;
     void setCities(const vector<city *> &cities);
-    float getFitness() const;
+    double getFitness() const;
     bool operator<(const tour& t);
     void deleteCities();
     void display();

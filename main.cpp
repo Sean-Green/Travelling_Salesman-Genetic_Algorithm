@@ -9,13 +9,7 @@ void display_cities(vector<city *> c){
     }
 }
 int main() {
-    srand(time(NULL));
-    int gen = 0;
-    tour_manager tm;
-    for (int i = 0; i < 1000; ++i){
-        cout << "Generation " << gen++ << endl;
-        tm.display();
-        tm.generate();
-    }
+    tour_manager tm(32, 32, 1000, .75);
+    tm.run();
     return 0;
 }

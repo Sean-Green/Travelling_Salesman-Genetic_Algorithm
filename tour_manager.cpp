@@ -12,14 +12,7 @@ void tour_manager::setElite() {
 }
 
 tour_manager::tour_manager() {
-    for (int i = 0; i < num_cities; i++) {
-        cities.push_back(new city());
-    }
-    for (int i = 0; i < num_tours; ++i){
-        tours.push_back(tour(cities));
-    }
-    sort(tours.begin(), tours.end());
-    elite = tours[0];
+    make_tours();
 }
 
 void tour_manager::display() {
@@ -66,14 +59,41 @@ void tour_manager::mutate() {
     }
 }
 
-void tour_manager::run(int cities, int tours, int iterations, double improvement) {
-    num_cities = cities;
-    num_tours = tours;
-    int generations = 0;
-    while (generations < iterations) {
-
-    }
+tour_manager::tour_manager(int cities, int tours, int iterations, double improvement):num_cities(cities), num_tours(tours),
+    iterations(iterations),improvement(improvement){
+    make_tours();
 }
+
+void tour_manager::make_tours() {
+    srand(time(NULL));
+    for (int i = 0; i < num_cities; i++) {
+        cities.push_back(new city());
+    }
+    for (int i = 0; i < num_tours; ++i){
+        tours.push_back(tour(cities));
+    }
+    sort(tours.begin(), tours.end());
+    elite = tours[0];
+    base_fitness = elite.getFitness();
+}
+
+void tour_manager::run() {
+    int generation = 0;
+    double gen_improvement;
+    while (generation < iterations ) {
+        gen_improvement = (base_fitness - tours[0].getFitness()) / base_fitness;
+        cout << "Generation #" << generation++ << "\nDistance: " << elite.getFitness() << endl;
+        cout << "Improvement this gen: " << gen_improvement << endl;
+        generate();
+    }
+//    if ((1 - (elite.getFitness() / base_fitness) >= improvement)){
+//        cout << "ACHIEVED";
+//    } else {
+//        cout << "Didn't make it";
+//    }
+
+}
+
 
 
 

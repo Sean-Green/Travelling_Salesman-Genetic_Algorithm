@@ -41,7 +41,7 @@ tour::tour() {
 
 }
 
-float tour::getFitness() const {
+double tour::getFitness() const {
     return fitness;
 }
 
